@@ -5,11 +5,13 @@ import com.nashe.zimbabwe.geographical.locations.district.District;
 import com.nashe.zimbabwe.geographical.locations.province.Province;
 import lombok.Data;
 import lombok.ToString;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 
 @Data
 @Entity
+@Audited
 @ToString
 @Table(name = "city", indexes = {@Index(columnList = "name", unique = true)})
 public class City extends BaseEntity {
@@ -22,4 +24,7 @@ public class City extends BaseEntity {
 
     @ManyToOne
     public District district;
+
+    @ManyToOne
+    public Province province;
 }

@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<hibernate-envers.version>5.4.2.Final</hibernate-envers.version>
+		<hibernate-envers.version>5.4.20.Final</hibernate-envers.version>
 	</properties>
 
 	<dependencies>
